@@ -1,48 +1,27 @@
 <template>
   <div class="screen-wrapper">
-    <Theme backgroundImage="https://source.unsplash.com/random">
-      <div class="view-wrapper">
-        <div class="max-w-2xl p-10 mx-auto flex flex-col gap-2">
-          <div v-for="(todo, index) in todos" :key="index">
-            <Card>
-              <CheckBox></CheckBox>
-              <span class="mx-2"> {{ todo.summary }}</span>
-            </Card>
-          </div>
+    <Theme>
+      <div class="view-wrapper h-full p-8 flex justify-center items-center">
+        <button class="w-16 p-2 text-center bg-white rounded shadow" @click.self="showModal=true">
+          显示
+        </button>
+        <Modal v-model="showModal">
           <div>
-            <Card>
-              <form action="">
-                <input type="textarea" value="第三件事">
-              </form>
-              <div class="text-right">
-                <Button>添加</Button>
-              </div>
-            </Card>
+            Hello World
           </div>
-        </div>
+        </Modal>
       </div>
     </Theme>
+
   </div>
 </template>
 
 <script setup>
-import { ref } from "vue"
-import Theme from "@/components/Theme.vue"
-import CheckBox from "@/components/CheckBox.vue"
-import Card from "@/components/Card.vue"
-import Button from "@/components/Button.vue"
-const todos = ref([
-  {
-    summary: "第一件事",
-    description: "描述可以不写",
-    status: "ready"
-  },
-  {
-    summary: "第二件事",
-    description: "描述可以不写",
-    status: "ready"
-  }
-])
+import {ref} from "vue"
+import Theme from "@/components/basic/Theme.vue"
+import Modal from "@/components/basic/Modal.vue"
+
+const showModal = ref(true)
 </script>
 
 <style>

@@ -1,7 +1,23 @@
-# Vue 3 + Vite
+# Hazelnut 坚果计划
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+使用Vite+Vue3+TailwindCSS实现的TodoList
 
-## Recommended IDE Setup
+## 功能清单
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+1. 创建计划
+2. 计划分组
+3. 过程回顾
+
+## 核心概念
+
+### 优先等级
+
+如果计划没有优先等级，那和没有计划无异，对计划清单进行基本的排序，可以帮助用户专注于更重要的事情，默认优先等级分为`紧急`,`重要`,`必要`,`可选`,`计划中`，其中`紧急`是指必须要尽快完成的；`重要`是指对结果有决定性影响的；`必要`是指必须完成，但完成质量对结果影响并不大；`可选`是指完成了对结果有好处，但不完成也不会有什么太大坏处；`计划中`是指还在考虑的事情，并不着急安排工作或者还不清晰如何进行。
+
+### 计划分组
+
+计划分组可以将不同的事情进行隔离，比如工作计划和生活计划添加到不同的分组中，避免在一件事情的计划被另一件事情的计划影响。
+
+### 过程回顾
+
+周期性的对计划完成的过程进行回顾，可以帮助用户更好的对未来的计划做指导，最重要的是，回顾成功的过程可以鼓励用户积极的进行下一步的计划。
